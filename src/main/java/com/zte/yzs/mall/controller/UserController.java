@@ -43,8 +43,6 @@ public class UserController {
         return "myinfo";
     }
 
-
-
     /*
      * 地址管理
      * */
