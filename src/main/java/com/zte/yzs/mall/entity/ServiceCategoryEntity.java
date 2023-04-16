@@ -1,6 +1,8 @@
 package com.zte.yzs.mall.entity;
 
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,6 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "app_scl_service_category")
+@Data
 public class ServiceCategoryEntity {
 
     @Id
@@ -17,27 +20,4 @@ public class ServiceCategoryEntity {
     @Column(name = "service_category")
     private String serviceCategory;
 
-    public ServiceCategoryEntity() {
-    }
-
-    public ServiceCategoryEntity(int serviceCategoryId, String serviceCategory) {
-        this.serviceCategoryId = serviceCategoryId;
-        this.serviceCategory = serviceCategory;
-    }
-
-    public int getServiceCategoryId() {
-        return serviceCategoryId;
-    }
-
-    public void setServiceCategoryId(int serviceCategoryId) {
-        this.serviceCategoryId = serviceCategoryId;
-    }
-
-    public String getServiceCategory() {
-        return serviceCategory;
-    }
-
-    public void setServiceCategory(String serviceCategory) {
-        this.serviceCategory = serviceCategory;
-    }
 }

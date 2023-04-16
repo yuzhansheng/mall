@@ -1,5 +1,7 @@
 package com.zte.yzs.mall.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,6 +10,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "app_scl_service_order")
+@Data
 public class ServiceOrderEntity {
 
     @Id
@@ -43,115 +46,4 @@ public class ServiceOrderEntity {
 
     @Column(name = "order_service_etime")
     private Date orderServiceEtime;
-
-    public ServiceOrderEntity() {
-    }
-
-
-    public ServiceOrderEntity(String orderServiceId, Long serviceId, String serviceContent, float orderServiceFee, String orderPlatformFee, String orderServiceScore, String orderServiceStatus, Date orderServiceStime, Date orderServiceEtime) {
-        this.orderServiceId = orderServiceId;
-        this.serviceId = serviceId;
-        this.serviceContent = serviceContent;
-        this.orderServiceFee = orderServiceFee;
-        this.orderPlatformFee = orderPlatformFee;
-        this.orderServiceScore = orderServiceScore;
-        this.orderServiceStatus = orderServiceStatus;
-        this.orderServiceStime = orderServiceStime;
-        this.orderServiceEtime = orderServiceEtime;
-    }
-
-    public String getOrderServiceId() {
-        return orderServiceId;
-    }
-
-    public void setOrderServiceId(String orderServiceId) {
-        this.orderServiceId = orderServiceId;
-    }
-
-    public Long getServiceId() {
-        return serviceId;
-    }
-
-    public int getOrderServiceCategory() {
-        return orderServiceCategory;
-    }
-
-    public void setOrderServiceCategory(int orderServiceCategory) {
-        this.orderServiceCategory = orderServiceCategory;
-    }
-
-    public String getServiceContent() {
-        return serviceContent;
-    }
-
-    public void setServiceContent(String serviceContent) {
-        this.serviceContent = serviceContent;
-    }
-
-    public void setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
-    }
-
-    public float getOrderServiceFee() {
-        return orderServiceFee;
-    }
-
-    public void setOrderServiceFee(float orderServiceFee) {
-        this.orderServiceFee = orderServiceFee;
-    }
-
-    public String getOrderPlatformFee() {
-        return orderPlatformFee;
-    }
-
-    public void setOrderPlatformFee(String orderPlatformFee) {
-        this.orderPlatformFee = orderPlatformFee;
-    }
-
-    public String getOrderServiceScore() {
-        return orderServiceScore;
-    }
-
-    public void setOrderServiceScore(String orderServiceScore) {
-        this.orderServiceScore = orderServiceScore;
-    }
-
-    public String getOrderServiceStatus() {
-        return orderServiceStatus;
-    }
-
-    public void setOrderServiceStatus(String orderServiceStatus) {
-        this.orderServiceStatus = orderServiceStatus;
-    }
-
-    public Date getOrderServiceStime() {
-        return orderServiceStime;
-    }
-
-    public void setOrderServiceStime(Date orderServiceStime) {
-        this.orderServiceStime = orderServiceStime;
-    }
-
-    public Date getOrderServiceEtime() {
-        return orderServiceEtime;
-    }
-
-    public void setOrderServiceEtime(Date orderServiceEtime) {
-        this.orderServiceEtime = orderServiceEtime;
-    }
-
-    @Override
-    public String toString() {
-        return "ServiceOrderEntity{" +
-                "orderServiceId='" + orderServiceId + '\'' +
-                ", serviceId=" + serviceId +
-                ", serviceContent='" + serviceContent + '\'' +
-                ", orderServiceFee='" + orderServiceFee + '\'' +
-                ", orderPlatformFee='" + orderPlatformFee + '\'' +
-                ", orderServiceScore='" + orderServiceScore + '\'' +
-                ", orderServiceStatus='" + orderServiceStatus + '\'' +
-                ", orderServiceStime=" + orderServiceStime +
-                ", orderServiceEtime=" + orderServiceEtime +
-                '}';
-    }
 }
